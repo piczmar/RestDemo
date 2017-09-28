@@ -90,7 +90,7 @@
 							<destFile>${project.build.directory}/jacoco.exec</destFile>
 							<port>10001</port>
 							<reset>true</reset>
-							<append>true</append>
+							<append>false</append>
 						</configuration>
 						<executions>
 							<execution>
