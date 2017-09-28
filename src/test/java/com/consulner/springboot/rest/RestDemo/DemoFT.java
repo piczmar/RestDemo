@@ -37,7 +37,7 @@ public class DemoFT {
   }
 
   private String createURLWithPort(String uri) {
-    return "http://localhost:" + port + appContext +  uri;
+    return "http://172.17.0.1:" + port + appContext +  uri;
   }
 }
 
