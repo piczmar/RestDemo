@@ -1,4 +1,4 @@
-package com.consulner.springboot.rest.RestDemo;
+package com.consulner.springboot.rest;
 
 public class DemoDTO {
 
