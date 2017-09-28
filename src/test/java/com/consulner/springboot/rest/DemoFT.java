@@ -20,7 +20,7 @@ public class DemoFT {
 
   @Test
   public void testRetrieveStudentCourse() throws JSONException {
-
+    System.out.println("Running test against remote server");
     HttpEntity<String> entity = new HttpEntity<String>(null, headers);
 
     ResponseEntity<String> response = restTemplate.exchange(
