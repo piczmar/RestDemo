@@ -42,7 +42,7 @@ pipeline {
         }
         stage ('Functional tests') {
             steps {
-                sh 'mvn install -Pstaging'
+                sh 'mvn clean install -Pstaging'
             }
             post {
                 success {
