@@ -6,16 +6,18 @@
         <artifactId>RestDemo</artifactId>
         <groupId>com.consulner.springboot.rest</groupId>
         <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>com.consulner.springboot.rest.ft-staging</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
             <groupId>com.consulner.springboot.rest</groupId>
             <artifactId>com.consulner.springboot.rest.app</artifactId>
             <version>${project.version}</version>
+            <classifier>classes</classifier>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -25,7 +27,6 @@
             <scope>compile</scope>
         </dependency>
     </dependencies>
-
 
     <build>
         <plugins>
