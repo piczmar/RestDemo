@@ -13,6 +13,7 @@
     <artifactId>com.consulner.springboot.rest.app</artifactId>
 
     <packaging>war</packaging>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -43,6 +44,7 @@
     </dependencies>
 
     <build>
+        <finalName>RestDemo-${version}</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
