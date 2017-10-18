@@ -46,7 +46,7 @@ pipeline {
             }
             post {
                 success {
-                    junit '**/target/**/*.xml'
+                    junit '**/target/*-reports/*.xml'
                     jacoco(execPattern: 'ft-staging/target/jacoco.exec')
                     archive "ft-staging/target/**/*"
                 }
