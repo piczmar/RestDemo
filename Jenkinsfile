@@ -36,12 +36,13 @@ pipeline {
         stage ('Start tomcat') {
             steps {
                 sh 'ssh ${CONN} "${TOMCAT_HOME}/bin/catalina.sh start"'
+                sh 'chmod +x wait_until_deployed.sh'
                 sh './wait_until_deployed.sh ${INITIALIZE_URL}'
             }
         }
         stage ('Functional tests') {
             steps {
-                sh 'mvn verify -Pstaging'
+                sh 'mvn install -Pstaging'
             }
             post {
                 success {
