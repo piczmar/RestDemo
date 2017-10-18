@@ -23,7 +23,7 @@ pipeline {
 
         stage ('Build') {
             steps {
-                sh 'mvn -Dmaven.test.failure.ignore=true clean package'
+                sh 'mvn -Dmaven.test.failure.ignore=true clean install'
             }
         }
         stage ('Deploy') {
@@ -41,7 +41,7 @@ pipeline {
         }
         stage ('Functional tests') {
             steps {
-                sh 'mvn -Pstaging verify'
+                sh 'mvn verify -Pstaging'
             }
             post {
                 success {
