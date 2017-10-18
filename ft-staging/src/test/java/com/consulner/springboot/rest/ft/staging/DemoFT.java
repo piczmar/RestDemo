@@ -1,4 +1,4 @@
-package com.consulner.springboot.rest.report;
+package com.consulner.springboot.rest.ft.staging;
 
 import org.json.JSONException;
 import org.junit.Test;
@@ -9,7 +9,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
-public class ApiFT {
+public class DemoFT {
 
   private static final String port = "8080";
   private static  final String appContext = "/RestDemo-0.0.1-SNAPSHOT";
@@ -19,12 +19,12 @@ public class ApiFT {
   HttpHeaders headers = new HttpHeaders();
 
   @Test
-  public void testApi() throws JSONException {
+  public void testDemo() throws JSONException {
     System.out.println("Running test against remote server");
     HttpEntity<String> entity = new HttpEntity<String>(null, headers);
 
     ResponseEntity<String> response = restTemplate.exchange(
-            createURLWithPort("/api"),
+            createURLWithPort("/demo"),
             HttpMethod.GET, entity, String.class);
 
     String expected = "{\"message\":\"Hello there!!\"}";
