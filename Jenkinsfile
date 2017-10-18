@@ -30,7 +30,7 @@ pipeline {
             steps {
                 sh 'ssh ${CONN} rm -f -R ${TOMCAT_HOME}/webapps/RestDemo*'
                 sh 'ssh ${CONN} ls ${TOMCAT_HOME}/webapps/'
-                sh 'scp target/RestDemo-0.0.1-SNAPSHOT.war ${CONN}:${TOMCAT_HOME}/webapps/'
+                sh 'scp app/target/RestDemo-0.0.1-SNAPSHOT.war ${CONN}:${TOMCAT_HOME}/webapps/'
             }
         }
         stage ('Start tomcat') {
